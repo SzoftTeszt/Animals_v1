@@ -1,0 +1,16 @@
+{
+    "name": "ÁllatKereskedés",
+    "search":"Keresés",
+    "nyelvValasztek":[
+        {"text":"Magyar", "sign":"hu"},
+        {"text":"English", "sign":"en"},
+        {"text":"Deutsch", "sign":"de"}
+       ],
+
+    "menu":[
+        {"text":"Kezdőlap", "link":"home"},
+        {"text":"Állatok", "link":"animals"},
+        {"text":"Belépés", "link":"login"},
+        {"text":"Regisztráció", "link":"#"}
+    ]    
+}

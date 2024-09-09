@@ -1,23 +1,25 @@
+
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <!-- {{menuItems|json}} -->
+      <a class="navbar-brand" href="#">{{name}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+         
+        <ng-container *ngIf="menuItems.length>0">
+          <li  *ngFor="let menu of menuItems" class="nav-item">
+            <a class="nav-link" [routerLink]="menu.link">{{menu.text}}</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+        </ng-container>
          
          
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2" type="search" [placeholder]="search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">{{search}}</button>
         </form>
 
         <ul class="navbar-nav  mb-2 mb-lg-0">
@@ -33,7 +35,7 @@
                 <ul [ngbCollapse]="langSelectorCollapse" class="dropdown-menu">
                 
                <li *ngFor="let lang of nyelvValasztek">
-                    <a class="dropdown-item" >
+                    <a (click)="langChange(lang)" class="dropdown-item" >
                        {{lang.text}}
                   </a>
                 </li>  

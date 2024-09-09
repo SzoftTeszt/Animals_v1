@@ -1,0 +1,15 @@
+{
+    "name": "Animal Shop",
+    "search":"Search",
+    "nyelvValasztek":[
+        {"text":"Magyar", "sign":"hu"},
+        {"text":"English", "sign":"en"},
+        {"text":"Deutsch", "sign":"de"}
+       ],
+
+    "menu":[
+        {"text":"Home", "link":"home"},
+        {"text":"Animals", "link":"animals"},
+        {"text":"Login", "link":"login"}
+    ]    
+}

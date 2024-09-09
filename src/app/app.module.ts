@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { AnimalsComponent } from './animals/animals.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageErrorComponent } from './page-error/page-error.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,13 @@ import { PageErrorComponent } from './page-error/page-error.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -29,11 +29,15 @@
                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{actLang}}
                 </a>
+                <!-- {{nyelvValasztek|json}} -->
                 <ul [ngbCollapse]="langSelectorCollapse" class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                
+               <li *ngFor="let lang of nyelvValasztek">
+                    <a class="dropdown-item" >
+                       {{lang.text}}
+                  </a>
+                </li>  
+                
                 </ul>
             </li>
         </ul>

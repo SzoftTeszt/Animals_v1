@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
    langSelectorCollapse=true
-   langItems=[
-    {text:"Magyar", "sign":"hu"},
-    {text:"English", "sign":"en"},
+   nyelvValasztek:any=[
+    {text:"Magyar", sign:"hu"},
+    {text:"English", sign:"en"}
    ]
    actLang="Magyar"
 }
